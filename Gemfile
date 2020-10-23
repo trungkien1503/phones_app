@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
@@ -31,9 +31,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'better_errors', '~> 2.7'
   gem 'dotenv-rails', '~> 2.7.6'
-  gem 'pry', '~> 0.13.1'
   gem 'factory_bot_rails', '~> 6.1'
   gem 'faker', '~> 2.13'
+  gem 'pry', '~> 0.13.1'
+  gem 'rails-controller-testing', '~> 1.0.4'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'rubocop', '~> 0.89.1'
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
@@ -53,6 +54,8 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'database_cleaner-active_record', '~> 1.8.0'
+  gem 'simplecov', require: false
   gem 'webdrivers'
 end
 

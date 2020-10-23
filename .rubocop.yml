@@ -20,6 +20,7 @@ AllCops:
     - "tmp/**/*"
     - "config/initializers/*"
     - "config/environments/*"
+    - spec/rails_helper.rb
 
 Layout/LineLength:
   Max: 200
