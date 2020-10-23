@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Body color:
+  = @phone.body_color
+p
+  strong Data memory:
+  = @phone.data_memory
+p
+  strong Model:
+  = @phone.model
+p
+  strong Price:
+  = @phone.price
+
+=> link_to 'Edit', edit_phone_path(@phone)
+'|
+=< link_to 'Back', phones_path

@@ -1,0 +1,27 @@
+h1 Listing phones
+
+table
+  thead
+    tr
+      th Body color
+      th Data memory
+      th Model id
+      th Price
+      th
+      th
+      th
+
+  tbody
+    - @phones.each do |phone|
+      tr
+        td = phone.body_color
+        td = phone.data_memory
+        td = phone.model_id
+        td = phone.price
+        td = link_to 'Show', phone
+        td = link_to 'Edit', edit_phone_path(phone)
+        td = link_to 'Destroy', phone, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Phone', new_phone_path

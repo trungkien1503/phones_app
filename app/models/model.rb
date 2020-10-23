@@ -1,6 +1,6 @@
 class Model < ApplicationRecord
   belongs_to :manufacturer
-  has_many :phones, dependent: :destroy
+  has_many :phones
 
   validates :name, presence: true, uniqueness: true
   validates :os_version, presence: true
