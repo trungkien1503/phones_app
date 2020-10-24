@@ -64,6 +64,7 @@ class PhonesController < ApplicationController
       :data_memory,
       :price,
       :model_id,
+      :main_photo,
     )
   end
 end

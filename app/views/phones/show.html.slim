@@ -19,6 +19,11 @@ h2 Phone details
     strong Price:
   .col-xs-10
     = @phone.price
+.row
+  .col-xs-2
+    strong Main Photo
+  .col-xs-10
+   = image_tag @phone.main_photo.url
 
 = link_to 'Edit', edit_phone_path(@phone), class: 'btn btn-info'
 = link_to 'Back', phones_path, class: 'btn btn-default'

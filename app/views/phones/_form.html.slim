@@ -1,4 +1,4 @@
-= form_for @phone do |f|
+= form_for @phone, html: { multipart: true } do |f|
   - if @phone.errors.any?
     #error_explanation
       h2 = "#{pluralize(@phone.errors.count, "error")} prohibited this phone from being saved:"
@@ -20,5 +20,8 @@
   .form-group
     = f.label :price
     = f.number_field :price, class: 'form-control'
+  .form-group
+    = f.label :main_photo
+    = f.file_field :main_photo
   .actions
     = f.submit 'Submit', class: 'btn btn-success'

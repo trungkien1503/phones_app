@@ -69,3 +69,4 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'rubocop-rails', '~> 2.7'
 gem 'rubocop-rspec', '~> 1.27'
 gem 'slim-rails', '~> 3.1'
+gem "paperclip", "~> 6.0.0"
