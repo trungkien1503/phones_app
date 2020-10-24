@@ -1,18 +1,24 @@
-p#notice = notice
+h2 Phone details
+.row
+  .col-xs-2
+    strong Body color:
+  .col-xs-10
+    = @phone.body_color
+.row
+  .col-xs-2
+    strong Data memory:
+  .col-xs-10
+    = @phone.data_memory
+.row
+  .col-xs-2
+    strong Model:
+  .col-xs-10
+    = @phone.model.name
+.row
+  .col-xs-2
+    strong Price:
+  .col-xs-10
+    = @phone.price
 
-p
-  strong Body color:
-  = @phone.body_color
-p
-  strong Data memory:
-  = @phone.data_memory
-p
-  strong Model:
-  = @phone.model
-p
-  strong Price:
-  = @phone.price
-
-=> link_to 'Edit', edit_phone_path(@phone)
-'|
-=< link_to 'Back', phones_path
+= link_to 'Edit', edit_phone_path(@phone), class: 'btn btn-info'
+= link_to 'Back', phones_path, class: 'btn btn-default'

@@ -10,9 +10,12 @@ class PhonesController < ApplicationController
 
   def new
     @phone = Phone.new
+    @models = Model.all
   end
 
-  def edit; end
+  def edit
+    @models = Model.all
+  end
 
   def create
     @phone = Phone.new(phone_params)
