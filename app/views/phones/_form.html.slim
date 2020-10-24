@@ -6,16 +6,18 @@
         - @phone.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :body_color
-    = f.text_field :body_color
-  .field
+    = f.text_field :body_color, class: 'form-control'
+  .form-group
     = f.label :data_memory
-    = f.number_field :data_memory
-  .field
+    = f.number_field :data_memory, class: 'form-control'
+  .form-group
     = f.label :model_id
-    = f.number_field :model_id
-  .field
+    .select
+      = f.select :model_id, Model.pluck(:name), { class: 'form-control' }, prompt: 'Select Model'
+  .form-group
     = f.label :price
-    = f.number_field :price
-  .actions = f.submit
+    = f.number_field :price, class: 'form-control'
+  .actions
+    = f.submit 'Update Phone', class: 'btn btn-success'
